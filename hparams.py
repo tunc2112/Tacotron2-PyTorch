@@ -7,7 +7,8 @@ class hparams:
     ################################
     # Data Parameters              #
     ################################
-    text_cleaners=['english_cleaners']
+    load_mel_from_disk=True
+    text_cleaners=['basic_cleaners']
 
     ################################
     # Audio                        #
