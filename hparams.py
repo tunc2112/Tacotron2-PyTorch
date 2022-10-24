@@ -15,7 +15,7 @@ class hparams:
     ################################
     num_mels = 80
     num_freq = 513
-    sample_rate = 22050
+    sample_rate = 16000
     frame_shift = 256
     frame_length = 1024
     fmin = 0
