@@ -94,6 +94,7 @@ def train(args):
             os.makedirs(args.ckpt_dir)
             os.chmod(args.ckpt_dir, 0o775)
 
+    hps.sample_rate = args.sample_rate or hps.sample_rate
     model.train()
     # ================ MAIN TRAINNIG LOOP! ===================
     epoch = 0
@@ -162,6 +163,8 @@ if __name__ == '__main__':
                         help = 'directory to save checkpoints')
     parser.add_argument('-cp', '--ckpt_pth', type = str, default = '',
                         help = 'path to load checkpoints')
+    parser.add_argument('-sr', '--sample_rate', type = int, default = hps.sample_rate,
+                        help = 'sample rate')
 
     args = parser.parse_args()
     
